@@ -1,13 +1,22 @@
-import { config } from './app.json';
-
-export default ({ config: baseConfig }) => {
-  // Use the base config from app.json
-  const finalConfig = { ...baseConfig };
-
-  // For web exports, specify the web platform
-  if (process.env.EXPO_TARGET === 'web') {
-    finalConfig.platforms = ['web'];
+module.exports = {
+  name: "Zoo Keeper",
+  slug: "zoo-keeper",
+  version: "1.0.0",
+  orientation: "portrait",
+  icon: "./assets/images/favicon.png",
+  userInterfaceStyle: "automatic",
+  splash: {
+    image: "./assets/images/favicon.png",
+    resizeMode: "contain",
+    backgroundColor: "#ffffff"
+  },
+  web: {
+    bundler: "metro",
+    output: "static"
+  },
+  extra: {
+    eas: {
+      projectId: "zoo-keeper"
+    }
   }
-
-  return finalConfig;
 }; 
