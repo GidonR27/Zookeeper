@@ -1,7 +1,14 @@
 import 'expo-router/entry';
-import { View, Text } from 'react-native';
+import { useEffect } from 'react';
+import { Platform } from 'react-native';
 
-// This file provides a minimal entry point for the web build
-export default function App() {
-  return null;
+// Root component that initializes the app
+export default function App({ children }) {
+  useEffect(() => {
+    if (Platform.OS === 'web') {
+      console.log('Zoo Keeper app initializing on web platform');
+    }
+  }, []);
+
+  return children;
 } 

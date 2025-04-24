@@ -24,22 +24,6 @@
       align-items: center;
       flex: 1;
       background-color: #E8F5E9;
-      color: #2E7D32;
-      text-align: center;
-    }
-    .loading-title {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 16px;
-    }
-    .loading-subtitle {
-      font-size: 24px;
-      margin-bottom: 24px;
-      color: #388E3C;
-    }
-    .loading-text {
-      font-size: 18px;
-      color: #4CAF50;
     }
     /* Hide loading screen when app is loaded */
     .root-loaded .loading-container {
@@ -53,7 +37,6 @@
       border-radius: 50%;
       border-top-color: #4CAF50;
       animation: spin 1s ease-in-out infinite;
-      margin: 20px 0;
     }
     @keyframes spin {
       to { transform: rotate(360deg); }
@@ -63,10 +46,7 @@
 <body>
   <div id="root">
     <div class="loading-container">
-      <h1 class="loading-title">Zoo Keeper</h1>
-      <p class="loading-subtitle">Educational games for kids</p>
       <div class="loading-spinner"></div>
-      <p class="loading-text">Loading application...</p>
     </div>
   </div>
   <script>
