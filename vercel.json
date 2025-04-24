@@ -1,5 +1,5 @@
 {
-  "buildCommand": "expo export",
+  "buildCommand": "EXPO_TARGET=web expo export",
   "outputDirectory": "dist",
   "framework": "create-react-app",
   "rewrites": [
