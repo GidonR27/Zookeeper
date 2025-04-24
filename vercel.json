@@ -1,6 +1,6 @@
 {
-  "buildCommand": "EXPO_TARGET=web expo export",
-  "outputDirectory": "dist",
+  "buildCommand": "EXPO_TARGET=web expo export --platform web",
+  "outputDirectory": "dist/web",
   "framework": "create-react-app",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
